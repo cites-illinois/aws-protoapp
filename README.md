@@ -1,1 +1,1 @@
-[![Build Status](https://drone.sandbox.aws.illinois.edu/api/badges/techservices/aws-protoapp/status.svg)](https://drone.sandbox.aws.illinois.edu/techservices/aws-protoapp)
+[![Build Status](https://drone.techservices.illinois.edu/api/badges/techservices/sdg-python/status.svg)](https://drone.techservices.illinois.edu/techservices/sdg-python)
