@@ -1,0 +1,34 @@
+version: '2.0'
+
+services:
+  db:
+    container_name: db
+    image: postgres
+
+  cache:
+    container_name: cache
+    image: memcached
+
+  web:
+    build: .
+    container_name: web
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+      - cache
+    environment:
+      # Django environment variables for cache service.
+      CACHE_BACKEND:      django.core.cache.backends.memcached.MemcachedCache
+      CACHE_LOCATION:     cache:11211
+      CACHE_TIMEOUT:      300
+      # Django environment variables for PostgreSQL database.
+      DB_ENGINE:          django.db.backends.postgresql
+      DB_HOST:            db
+      DB_NAME:            postgres
+      DB_USER:            postgres
+      DB_PORT:            5432
+      # Environment variables for Django.
+      DJANGO_SETTINGS_MODULE: protoapp_deploy.settings
+      # Environment variables for uwsgi.
+      UWSGI_PROJECT:      protoapp_deploy

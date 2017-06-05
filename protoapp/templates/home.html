@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Hello{% endblock %}
+{% block content %}
+
+<img src="{% static "protoapp/image/semaphore.jpg" %}" width="288" 
+     alt="semaphore" />
+
+<h2>Lame example page</h2>
+
+<p>
+We bid you hello from this lame page!
+</p>
+{% endblock %}

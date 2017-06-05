@@ -1,0 +1,7 @@
+psycopg2
+#	TODO: Should python-memcached be a requirement of protoapp itself?
+python-memcached
+uwsgi
+--extra-index-url http://sdg-pip.sandbox.aws.illinois.edu/index/stage
+--trusted-host    sdg-pip.sandbox.aws.illinois.edu
+protoapp

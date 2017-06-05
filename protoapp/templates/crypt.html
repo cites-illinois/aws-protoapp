@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Crypt{% endblock %}
+{% block content %}
+
+<img src="{% static "protoapp/image/semaphore.jpg" %}" width="288" 
+     alt="semaphore" />
+
+<h2>Encrypt a pass phrase</h2>
+
+<p>
+Hashed password value: <code>{{ hashed_pw }}</code>.
+</p>
+
+<p>
+Elapsed hash time: {{ elapsed_time }} seconds.
+</p>
+{% endblock %}

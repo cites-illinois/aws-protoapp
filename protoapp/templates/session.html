@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}Session{% endblock %}
+{% block content %}
+
+<img src="{% static "protoapp/image/semaphore.jpg" %}" width="144" 
+     alt="semaphore" />
+
+<h2>Session</h2>
+{% if request.session.request_list %}
+  <table class="table table-striped table-sm">
+  <thead>
+    <tr>
+      <th>Timestamp</th>
+      <th>Method | Path</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for r in request.session.request_list reversed %}
+    <tr>
+      <td>{{ r.timestamp }}</td>
+      <td>{{ r.method }} {{ r.path }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  </table>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,6 @@
+#	List of directories that contain non-package files that must
+#	be included in the distribution package.
+recursive-include	protoapp/fixtures	*
+recursive-include	protoapp/migrations	*
+recursive-include	protoapp/static		*
+recursive-include	protoapp/templates	*
