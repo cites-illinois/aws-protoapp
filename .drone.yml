@@ -1,3 +1,4 @@
+#   This is goofy.
 pipeline:
 #   build:
 #       image: python:2.7
