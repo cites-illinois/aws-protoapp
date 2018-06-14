@@ -11,7 +11,7 @@ pipeline:
         region: us-east-2
     #   repo: 224588347132.dkr.ecr.us-east-2.amazonaws.com/roma-test
         repo: roma-test
-#       registry: 224588347132.dkr.ecr.us-east-2.amazonaws.com
+        registry: 224588347132
         tags:
             - latest
             - ${DRONE_COMMIT}
