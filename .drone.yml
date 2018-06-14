@@ -9,6 +9,7 @@ pipeline:
         image: plugins/ecr:1.0
         region: us-east-2
         repo: 224588347132.dkr.ecr.us-east-2.amazonaws.com/roma-test
+        registry: 224588347132.dkr.ecr.us-east-2.amazonaws.com
         tags:
             - latest
             - ${DRONE_COMMIT}
