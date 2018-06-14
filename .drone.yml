@@ -9,7 +9,8 @@ pipeline:
     ecr:
         image: plugins/ecr
         region: us-east-2
-        repo: 224588347132.dkr.ecr.us-east-2.amazonaws.com/roma-test
+    #   repo: 224588347132.dkr.ecr.us-east-2.amazonaws.com/roma-test
+        repo: roma-test
 #       registry: 224588347132.dkr.ecr.us-east-2.amazonaws.com
         tags:
             - latest
